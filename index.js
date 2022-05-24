@@ -1,19 +1,31 @@
 // Import stylesheets
-import './style.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import './css/style.css';
 
 // Write Javascript code!
 
+// var nickname = prompt("Please enter your name: ");
+// if (nickname != null) {
+//   document.getElementById("app").innerText ="Hello, " + nickname + "!";
+// }
+
 /* Day of birth */
-var birthDayPlace = document.querySelector('#birthDay');
-var birthDayValue = prompt('Enter your day of birth!');
+var birthDayPlace = document.getElementById('birthDayPlace');
+var birthDayValue = prompt('Enter your day of birth:');
 console.log(birthDayValue);
-birthDayPlace.innerText = birthDayValue;
+if (birthDayValue != null) {
+  birthDayPlace.innerText = birthDayValue;
+}
 
 /* Month of birth */
-//var birthMmonth = document.querySelector('#birthMmonth');
-//var birthDayValue = prompt('Enter your month of birth:' + "January, Februar");
-// console.log(birthMonthValue);
-// birthMmonth.innerText = birthMonthValue;
+var birthMmonthPlace = document.getElementById('birthMmonthPlace');
+var birthMonthValue = prompt('Enter your month of birth:' + "January, Februar");
+console.log(birthMonthValue);
+if (birthMonthValue != null) {
+  birthMmonthPlace.innerText = birthMonthValue;
+}
+
 
 // Function to determine Zodiac sign
 // function zodiacSign(birthDayValue, birthMonthValue) {
