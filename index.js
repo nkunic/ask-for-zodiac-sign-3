@@ -3,111 +3,100 @@ import './style.css';
 
 // Write Javascript code!
 
-// Function to calculate sum digits of n
-function zodiacSign(day, month) {
+/* Day of birth */
+var birthDay = document.querySelector('#birthDay');
+var birthDayValue = prompt('Enter your day of birth!');
+console.log(birthDayValue);
+birthDay.innerText = birthDayValue;
 
-  let astroSign="";
-      
+/* Month of birth */
+var birthMmonth = document.querySelector('#birthMmonth');
+var birthDayValue = prompt('Enter your month of birth:' + "");
+console.log(birthMonthValue);
+birthMmonth.innerText = birthMonthValue;
+
+// Function to determine Zodiac sign
+function zodiacSign(birthDayValue, birthMonthValue) {
+  let astroSign = '';
+
   // Checks month and date within the valid range of a specified zodiac
-  if (month == "december"){      
-    if (day < 22) {
-      astroSign = "Sagittarius";
+  if (birthMonthValue == 'December') {
+    if (birthDayValue < 22) {
+      astroSign = 'Sagittarius';
     } else {
-      astroSign ="Capricorn";
+      astroSign = 'Capricorn';
+    }
+  } else if (birthMonthValue == 'January') {
+    if (birthDayValue < 20) {
+      astroSign = 'Capricorn';
+    } else {
+      astroSign = 'Aquarius';
+    }
+  } else if (birthMonthValue == 'February') {
+    if (birthDayValue < 19) {
+      astroSign = 'Aquarius';
+    } else {
+      astroSign = 'Pisces';
+    }
+  } else if (birthMonthValue == 'March') {
+    if (birthDayValue < 21) {
+      astroSign = 'Pisces';
+    } else {
+      astroSign = 'Aries';
+    }
+  } else if (birthMonthValue == 'April') {
+    if (birthDayValue < 20) {
+      astroSign = 'Aries';
+    } else {
+      astroSign = 'Taurus';
+    }
+  } else if (birthMonthValue == 'May') {
+    if (birthDayValue < 21) {
+      astroSign = 'Taurus';
+    } else {
+      astroSign = 'Gemini';
+    }
+  } else if (birthMonthValue == 'June') {
+    if (birthDayValue < 21) {
+      astroSign = 'Gemini';
+    } else {
+      astroSign = 'Cancer';
+    }
+  } else if (birthMonthValue == 'July') {
+    if (birthDayValue < 23) {
+      astroSign = 'Cancer';
+    } else {
+      astroSign = 'Leo';
+    }
+  } else if (birthMonthValue == 'August') {
+    if (birthDayValue < 23) {
+      astroSign = 'Leo';
+    } else {
+      astroSign = 'Virgo';
+    }
+  } else if (birthMonthValue == 'September') {
+    if (birthDayValue < 23) {
+      astroSign = 'Virgo';
+    } else {
+      astroSign = 'Libra';
+    }
+  } else if (birthMonthValue == 'October') {
+    if (birthDayValue < 23) {
+      astroSign = 'Libra';
+    } else {
+      astroSign = 'Scorpio';
+    }
+  } else if (birthMonthValue == 'November') {
+    if (birthDayValue < 22) {
+      astroSign = 'Scorpio';
+    } else {
+      astroSign = 'Sagittarius';
     }
   }
-          
-  else if (month == "January"){
-    if (day < 20) {
-      astroSign = "Capricorn";
-    } else {
-      astroSign ="Aquarius";
-    }    
-  }
-          
-  else if (month == "February"){
-    if (day < 19) {
-      astroSign = "Aquarius";
-    } else {
-      astroSign ="Pisces";
-    }
-  }
-          
-  else if(month == "March"){
-    if (day < 21) {
-      astroSign = "Pisces";
-    } else {
-      astroSign ="Aries";
-    }
-  }
-  else if (month == "April"){
-    if (day < 20) {
-      astroSign = "Aries";
-    } else {
-      astroSign ="Taurus";
-    }
-  }
-          
-  else if (month == "May"){
-    if (day < 21) {
-      astroSign = "Taurus";
-    } else {
-      astroSign ="Gemini";
-    }
-  }
-          
-  else if( month == "June"){
-    if (day < 21) {
-      astroSign = "Gemini";
-    } else {
-      astroSign ="Cancer";
-    }
-  }
-          
-  else if (month == "July"){
-    if (day < 23) {
-      astroSign = "Cancer";
-    } else {
-      astroSign ="Leo";
-    }
-  }
-          
-  else if( month == "August"){
-    if (day < 23) {
-      astroSign = "Leo";
-    } else {
-      astroSign ="Virgo";
-    }
-  }
-          
-  else if (month == "September"){
-    if (day < 23) {
-      astroSign = "Virgo";
-    } else {
-      astroSign ="Libra";
-    }
-  }
-          
-  else if (month == "October"){
-    if (day < 23) {
-      astroSign = "Libra";
-    } else {
-      astroSign ="Scorpio";
-    }
-  }
-          
-  else if (month == "November"){
-    if (day < 22) {
-      astroSign = "Scorpio";
-    } else {
-      astroSign ="Sagittarius";
-    }
-  }
-          
-  document.write(astroSign);
 }
- 
+
 // Driver Code
 let day = 4;
-let month = "august";
-zodiacSign(day, month);
+let birthMonthValue = 'August';
+zodiacSign(birthDayValue, birthMonthValue);
+//document.write(astroSign);
